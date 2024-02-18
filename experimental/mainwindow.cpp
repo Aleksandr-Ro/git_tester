@@ -9,9 +9,18 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     qDebug() << "Start apl.";
+
+    connect(ui->btnClick, SIGNAL(clicked()), this, SLOT(slotClick()));
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+
+void MainWindow::slotClick()
+{
+    int a = 5;
+    qDebug() << "Click.";
 }
