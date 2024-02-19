@@ -2,8 +2,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-#include "calculate.h"
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -13,8 +11,6 @@ MainWindow::MainWindow(QWidget *parent)
     qDebug() << "Start apl.";
 
     connect(ui->btnClick, SIGNAL(clicked()), this, SLOT(slotClick()));
-
-    qDebug() << plus(5, 7);
 }
 
 MainWindow::~MainWindow()
