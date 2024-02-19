@@ -1,4 +1,4 @@
-QT       += core gui
+QT += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,13 +13,18 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
-    mainwindow.h
+    ../submodules/common/calculate.h \
+    mainwindow.h \
 
 FORMS += \
     mainwindow.ui
 
 TRANSLATIONS += \
     experimental_ru_RU.ts
+
+INCLUDEPATH += . \
+    ../submodules/common
+
 CONFIG += lrelease
 CONFIG += embed_translations
 
